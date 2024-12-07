@@ -54,7 +54,7 @@ export class RegistrationAndEditPage {
         await this.page.goto('/patient-registration');
     }
 
-    readonly givenNameInput = () => this.page.locator('#givenName');
+    readonly givenNameInput = () => this.page.getByLabel('First Name');
     readonly middleNameInput = () => this.page.locator('#middleName');
     readonly familyNameInput = () => this.page.locator('#familyName');
     readonly sexRadioButton = (sex: PatientRegistrationSex) => this.page.locator(`label[for=gender-option-${sex}]`);
